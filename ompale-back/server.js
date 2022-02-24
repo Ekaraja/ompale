@@ -3,9 +3,12 @@ import express from 'express';
 import morgan from 'morgan';
 import colors from 'colors';
 import dotenv from 'dotenv';
+
+import {connectDB} from './config/db.js'
 // #endregion IMPORT
 
 dotenv.config()
+connectDB()
 
 const app = express();
 
