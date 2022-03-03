@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
+.photo-border {
+    border-radius: 0.8rem;
+    padding: 2rem 2rem 2rem 2rem ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    height: 90%;
+    -moz-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .photo-legend {
+    padding: 0.5rem 0;
+      color: rgb(37, 37, 37);
+    font-family: 'Gloria Hallelujah', cursive;
+    border: 1px solid grey;
+    width: 100%;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/ecailles.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    border-bottom-left-radius: 0.4rem; 
+    border-bottom-right-radius: 0.4rem;  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+
+.slide-image {
+    border-radius: 0.8rem;
+    filter: contrast(1.2) saturate(1.35);
+  }
+
+  .swipper-frame {
+      height: 60vh;
+      padding: 3rem;
+      background-color: #ffffff;
+      background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
+      /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }

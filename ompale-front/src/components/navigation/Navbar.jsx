@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,13 +11,16 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import "../../style/navbar.css"
+/* import { makeStyles } from "@mui/styles"; */
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+/*   const classes = useStyles(); */
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -35,17 +38,17 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{boxShadow: 1}}  elevation={1}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
+        <Toolbar disableGutters >
+{/*           <Typography
             variant="h6"
             noWrap
-            component="div"
+            component="nav"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
             O'Massy Pale
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -83,6 +86,7 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
+         
           <Typography
             variant="h6"
             noWrap
@@ -91,49 +95,31 @@ export default function Navbar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+
+          <div className="navbar-left">
+            <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex'} }}>
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, mx:7, color: "black", display: 'block', fontWeight: 600}}
+                >
+                  {page}
+                </Button>
               ))}
-            </Menu>
-          </Box>
+            </Box>
+          </div>
+          <img src="https://u.cubeupload.com/Sono/beer.png" style={{width: "100px" }}alt="" />
+          <div className="navbar-right"><h1>O'Massy Pale</h1></div>
+
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
+
+
+/* const useStyles = makeStyles({
+
+}) */

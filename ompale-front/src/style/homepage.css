@@ -1,0 +1,108 @@
+.welcome-message-frame {
+    min-height: 14vw;
+    border: 1px solid black;
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.welcome-message-content {
+    background-color: tan;
+    padding: 2rem 10vw; 
+}
+
+.events-frame {
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    min-height: 30vw;
+}
+
+.events-content {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.single-event {
+    height: 30vw;
+    width: 40vw;
+    border: 1px solid blue;
+    margin: 2rem;
+}
+
+@media screen and (max-width: 640px) {
+    .single-event {
+width: 90vw;
+height: 25vh;
+    }
+  }
+
+  .beer-carousel-frame {
+    min-height: 300px;
+    background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .single-beer-frame {
+      height: 200px;
+      width: 200px;
+      border-radius: 30px;
+      background: rgb(255, 255, 255);
+      z-index: 1;
+  }
+
+  .single-beer-img {
+      border-radius: 30px;
+      height: 150px;
+      width: 150px;
+      position: absolute;
+      z-index: 5;
+  }
+
+  .beer-hider {
+      width: 200px;
+      height: 200px;
+      background: lightsalmon;
+      z-index: 6;
+  }
+
+/*   SWIPPER */
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 88%;
+    height: 86%;
+    object-fit: cover;
+  }
+  
