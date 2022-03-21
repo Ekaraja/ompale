@@ -23,7 +23,10 @@ const beerSchema = new mongoose.Schema(
         },
         countInStock: Number,
         price: Number,
-        display: []
+        display: {
+            type: Boolean,
+            default: true
+        }
     },
     {
         timestamps: true
